@@ -57,7 +57,7 @@ ul{
 }
 .main-head h2{
     font-size: 25px;
-    font-weight: normal;
+    font-weight: bold;
     margin-bottom: 50px;
     position: relative;
     text-transform: uppercase;
@@ -515,14 +515,504 @@ width: 100%;
     cursor: pointer;
 }
 /* End Video section */
+/* Start About */
 .about{
-    padding: 100px 0;
+    padding: 100px 0 0;
 }
 .about .container{
     text-align: center;
     height: 360px;
     overflow: hidden;
 }
+@media (min-width:1821px){
+    .about .container{
+    height: 420px;
+    }
+}
+@media (min-width:2339px){
+    .about .container{
+    height: 508px;
+    }
+}
+@media (max-width:1199px){
+    .about .container{
+    height: 340px;
+    }
+}
+@media (max-width:991px){
+    .about .container{
+    height: 305px;
+    }
+}
 .about img{
     width: 25%;
 }
+/* End About */
+/* Start Static */
+.static{
+    padding: 100px 0;
+    text-align: center;
+    background-image: url(../images/static.Background.jpg);
+    background-size: cover;
+    position: relative;
+}
+.static::before{
+position: absolute;
+content: '';
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+background-color: #1d1e1f91;
+}
+.static .container{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;}
+.static .container .box{
+    padding: 50px;
+    background-color: #19c8fc70;
+    color: white;
+}
+@media (max-width: 767px){
+    .static .container .box{
+        flex-basis: 100%;
+}}
+@media (min-width: 768px){
+    .static .container .box{
+        flex-basis: 50%;
+}}
+@media (min-width: 992px){
+    .static .container .box{
+        flex-basis: 25%;
+}}
+.static .container i{   
+    font-size: 24px;
+    background: #34667f;
+    height: 60px;
+    width: 60px;
+    align-items: center;
+    margin: 0 auto 30px;
+    justify-content: center;
+    display: flex;
+    border-radius: 50px;
+}
+.static .container .box .number{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.static .container .box p{
+font-size: 15px;
+}
+/* End Static */
+/* <!-- start Testimonials & skills --> */
+.testimonialsSkills{
+    padding: 100px 0;
+    background-color: whitesmoke;
+
+}
+.testimonialsSkills > .container {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+@media (max-width:991px){
+    .testimonialsSkills > .container{
+        flex-direction: column;
+    }
+    .testimonialsSkills > .container > div {
+        margin-bottom: 100px;
+    }
+}
+.testimonialsSkills > .container > div {
+flex-basis: 45%;
+}
+.testimonialsSkills > .container > div > h3{
+    font-weight: inherit;
+    margin: 0 0 30px;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.testimonialsSkills > .container > div > p {
+    color: #777;
+    line-height: 2;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+.testimonialsSkills > .container > div > div > div > img{
+        width: 100px;
+        border-radius: 50px;
+        margin-right: 80px;
+}
+.testimonials > div .content{
+display: flex;
+align-items: center;
+margin-bottom: 60px;
+}
+.testimonials > div .content .text{
+    border-bottom: 1px solid;
+    color: #777;
+    padding-bottom: 12px;
+}
+.testimonials > div .content .text h3{
+    text-align: left;
+    line-height: 1.7;
+    font-weight: 600;
+    font-size: 20px;
+}
+.testimonials > div .content .text p {
+    color: #777;
+    text-align: right;
+}
+.testimonials > div .bullet ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100px;
+    height: 25px;
+    margin: 0 auto;
+    align-items: center;
+}
+.testimonials > div .bullet ul li {
+    width: 12px;
+    height: 50%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.testimonials > div .bullet ul li.active{
+    background-color: #00bcd4;
+    border: none;
+    height: 75%;
+    width: 20px;
+}
+.testimonialsSkills .container .skills .contentsSkills{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.testimonialsSkills .container .skills .contentsSkills .content{
+    margin: 0 0 50px 0;
+}
+.testimonialsSkills .container .skills .contentsSkills .content > h4{
+    text-transform: uppercase;
+    font-weight: normal;
+}
+.testimonialsSkills .container .skills .contentsSkills .content > div {
+    width: 100%;
+    background-color: grey;
+    height: 25px;
+    margin-top: 10px;
+    position: relative;
+}
+.testimonialsSkills .container .skills .contentsSkills .content > div span{
+    height: 100%;
+    background-color: #00bcd4;
+    position: relative;
+    display: block;
+}
+.testimonialsSkills .container .skills .contentsSkills .content > div span::after{
+    content: attr(data-progress);
+    top: -31px;
+    right: -15px;
+    font-size: 12px;
+    color: white;
+    padding: 4px;
+    background-color: black;
+    position: absolute;
+}
+.testimonialsSkills .container .skills .contentsSkills .content > div span::before{
+    content: '';
+    top: -10px;
+    right: -7px;
+    border-color: black;
+    position: absolute;
+    border: 7px solid;
+    border-color: black transparent transparent transparent;
+}
+/* <!-- end Testimonials & skills --> */
+/* Quote Section */
+.quote{
+    padding: 100px 0;
+    background-image: url(../images/landing.overlay.jpeg);
+    background-size: cover;
+    position: relative;
+}
+.quote::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color:#00000070;
+    ;
+}
+.quote > .container{
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+.quote > .container > q{
+font-size: 30px;
+}
+.quote > .container > p{
+    margin-top: 35px;
+}
+/* End Quote Section */
+/* Pricing */
+.pricing{
+    padding: 100px 0;
+    text-align: center;
+}
+.pricing .prices{
+    display: flex;
+}
+.pricing .prices .column{
+    flex-basis: 25%;
+    text-align: center;
+    margin: 0 10px;
+}
+.pricing .prices .column .main{
+    border-top: 2px solid var(--main-color);
+    padding: 0px 10px;
+}
+.pricing .prices .column .main h3{
+    text-transform: uppercase;
+    margin: 30px 0 0px;
+    font-weight: bold;
+    font-size: large;
+}
+.pricing .prices .column .main p{
+    font-size: 50px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    position: relative;
+    margin: auto;
+}
+.pricing .prices .column .main p::before{
+    content: '/MO';
+    font-size: 10px;
+    position: absolute;
+    bottom: 25px;
+    right: 0px;
+}
+.pricing .prices .column p::after{
+    content: '$';
+    font-size: 20px;
+    position: absolute;
+    top: 25px;
+    left: 0px;
+}
+@media(min-width:992px){
+    .pricing .prices .column .main p::before{
+        right: 40px;
+    }
+    .pricing .prices .column p::after{
+    left: 40px;
+}}
+@media(min-width:1200px){
+    .pricing .prices .column .main p::before{
+        right: 60px;
+    }
+    .pricing .prices .column p::after{
+    left: 65px;
+}}
+.pricing .prices .column p {
+    margin: 0px 25px;
+    padding: 20px 0px;
+    font-size:small ;
+}
+.pricing .prices .column .paras p:not(:last-child){
+    border-bottom: 1px solid var(--main-color);
+}
+.pricing .container > p{
+    margin-top: 50px;
+}
+.pricing button{
+    margin-top: 35px;
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+.pricing .container > button {
+    color: white;
+    background-color: var(--main-color);
+    font-weight: normal;
+    padding: 10px 30px;
+    cursor: pointer;
+}
+.pricing .container .prices .column button{
+    cursor:pointer;
+}
+.pricing .container .prices .column .paras {
+    border-bottom: 2px solid var(--main-color);
+    border-top: 2px solid var(--main-color);
+}
+/* End Pricing */
+/* EMAIL */
+.email{
+padding: 100px 0;
+background-image: url(../images/email.jpg);
+background-size: cover;
+position: relative;
+}
+.email::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #00000070;
+    position: absolute;
+}
+.email .container{
+    display: flex;
+    align-items: center;
+}
+.email .container .box{
+    display: flex;
+    position: relative;
+    color: white;
+    flex-basis: 70%;
+    border: 1px solid white;
+    align-items: center;
+    height: 50px;
+    padding: 0 15px;
+}
+.email .container .box p{
+    color: white;
+    text-transform: uppercase;
+    padding: 0 19px;
+    position: relative;
+}
+.email .container .box p::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    right: 5px;
+    top: 0;
+    background-color: white;
+}
+.email .container button{
+    background-color: var(--main-color);
+    position: relative;
+    padding: 10px 20px;
+    height: 50px;
+    border: 1px solid var(--main-color);
+    color: white;
+    text-transform: uppercase;
+    margin-right: 25px;
+    font-size: small;
+}
+.email .container > p{
+color: white;
+font-size: 14px;
+}
+/* End EMAIL */
+/* start Contact */
+.contact{
+    padding: 100px 0;
+}
+.contact .main-info{
+    display: flex;
+    text-align: left;
+    justify-content: space-evenly;
+}
+.contact .mailinfo{
+    flex-grow: 2;
+    padding: 10px;
+    position: relative;
+}
+.contact .mailinfo p{
+    border: 1px solid #777;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: small;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #777;
+}
+.contact .mailinfo p:last-of-type{
+padding-bottom: 100px;
+}
+.contact .mailinfo button{
+    padding: 15px 25px;
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: small;
+    position: absolute;
+    right: 10px;
+    margin-top: 15px;
+}
+.contact .allinfo{
+    flex-grow: 1;
+    margin-left: 15px;
+}
+.contact .allinfo .info{
+    margin-bottom: 40px;
+}
+.contact .allinfo .info h4{
+    padding: 5px;
+    margin-bottom: 26px;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.contact .allinfo .info p{
+margin-bottom: 5px;
+font-size: 10px;
+}
+/* End Contact */
+/* footer */
+.footer{
+    background-image: url(../images/landing.overlay.jpeg);
+    padding: 50px 0 0;
+    text-align: center;
+    color: white;
+}
+.footer img{
+    border-style: none;
+    width: 100px;
+    margin-bottom: 35px;
+    background-color: wheat;
+}
+.footer .container > p:not(:last-child){
+    text-transform: uppercase;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+.footer .social-icons::after{
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    top: -20px;
+    left: -50%;
+    background-color: white;
+    transform: translate(92%, 50%);
+}
+.footer .social-icons{
+    display: flex;
+    justify-content: space-evenly;
+    width: 33%;
+    margin: 40px auto;
+    font-size: smaller;
+    position: relative;
+}
+.footer .social-icons i{
+
+}
+.footer .container > p:last-of-type{
+    padding: 10px;
+    margin-top: 75px;
+}
+.footer .container > p span{
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+/* End footer */
